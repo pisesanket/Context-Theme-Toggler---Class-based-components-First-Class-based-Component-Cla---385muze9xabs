@@ -15,7 +15,10 @@ const Page = () => {
       <p className={"txt-" + context.theme} id="themed-text-container">
         lorem ipsum dolor iterit n stuff
       </p>
-      <button className={"btn btn-" + context.theme} id="themed-button">
+      <button
+        className={"btn btn-" + context.theme + " txt-" + context.theme}
+        id="themed-button"
+      >
         Themed Button
       </button>
       <LocalThemedBox />
