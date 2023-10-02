@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const ThemeContext = React.createContext()
-const ThemeProvider = (props) =>{
+const ThemeContext = React.createContext();
+const ThemeProvider = (props) => {
+  return (
+    <ThemeContext.Provider value={props.value}>
+      {props.children}
+    </ThemeContext.Provider>
+  );
+};
 
-    return (
-        <React.Fragment>
-
-        </React.Fragment>
-    )
-}
-
-export {ThemeProvider,ThemeContext}
+export { ThemeProvider, ThemeContext };
