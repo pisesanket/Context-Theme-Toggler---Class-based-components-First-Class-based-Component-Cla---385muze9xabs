@@ -3,6 +3,7 @@ import { ThemeContext } from "./ThemeProvider";
 
 const LocalThemedBox = () => {
   const context = useContext(ThemeContext);
+  const [count, setCount] = useState(0);
   const [localTheme, setLocalTheme] = useState("light");
   function toggleLocalTheme() {
     if (localTheme === "light") {
@@ -12,7 +13,11 @@ const LocalThemedBox = () => {
     }
   }
   useEffect(() => {
-    toggleLocalTheme();
+    if (count == 0) {
+      setCount(count + 1);
+    } else {
+      toggleLocalTheme();
+    }
   }, [context.theme]);
   return (
     <div
